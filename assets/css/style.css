@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: cursive;
+    font-family: cursive, 'Times New Roman', Times, serif;
 }
 .container{
     display: grid;
@@ -10,12 +10,13 @@ body{
         "lft lft lft ctn ctn ctn ctn ctn ctn rgt rgt rgt"
         "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
     grid-template-columns: 100px 100px auto auto auto auto auto auto auto auto 100px 100px;
-    grid-template-rows: 60px auto 60px;
+    grid-template-rows: auto auto auto;
 }
 
 .nav{
     grid-area: nav;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border: solid 1px #ebebeb;
@@ -41,7 +42,6 @@ body{
 
 .content{
     grid-area: ctn;
-
 }
 
 .card{
@@ -71,7 +71,8 @@ body{
 .contact{
     margin: 0px 10px;
     color: white;
-    transform: translate(0px, -10px);
+    position: relative;
+    bottom: 10px;
 }
 
 .contact p{
@@ -192,6 +193,11 @@ p.certif:hover{
     .content-text{
         display: grid;
         grid-template-columns: auto;
+    }
+    .card{
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
     }
 }
 
