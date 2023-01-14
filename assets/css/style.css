@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    font-family: cursive;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "lft lft lft ctn ctn ctn ctn ctn ctn rgt rgt rgt"
+        "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+    grid-template-columns: 100px 100px auto auto auto auto auto auto auto auto 100px 100px;
+    grid-template-rows: 60px auto 60px;
+}
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #ebebeb;
+    box-shadow: 0px 1px 5px #ebebeb;
+}
+
+.nav a{
+    margin: 10px;
+    color: black;
+    border: solid 1px #3a9efd;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav a:hover{
+    background-color: #f7a400;
+    color: white;
+    border: solid 1px white;
+    transform: scale(1.1);
+}
+
+.content{
+    grid-area: ctn;
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    background-color: #3a9efd;
+    box-shadow: 0px 5px 5px #ebebeb;
+}
+
+.card .profile{
+    margin: 10px;
+}
+
+.card .profile img{
+    border: solid 2px #f7a400;
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.contact{
+    margin: 0px 10px;
+    color: white;
+    transform: translate(0px, -10px);
+}
+
+.contact p{
+    font-size: large;
+    transform: translate(0px, -10px);
+}
+
+.contact a{
+    color: black;
+    border: solid 1px #f7a400;
+    border-radius: 10px;
+    padding: 8px;
+    text-decoration: none;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.contact a:hover{
+    background-color: #f7a400;
+    color: white;
+    border: solid 1px white;
+}
+
+.title{
+    border-radius: 20px 20px 0px 0px;
+    margin: 20px 10px 0px 10px;
+    padding: 0px 10px;
+    border: solid 1px #ebebeb;
+    background-color: #ebebeb;
+}
+
+.card-text{
+    border-radius: 0px 0px 20px 20px;
+    margin: 0px 10px 10px 10px;
+    padding: 10px;
+    border: solid 1px #ebebeb;
+    box-shadow: 0px 2px 5px #ebebeb;
+    text-align: justify;
+}
+
+.content-text{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    line-height: 20px;
+}
+
+.content-text div{
+    border: solid 1px #ebebeb;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+div.divskill{
+    display: flex;
+    border: none;
+    flex-wrap: wrap;
+    margin: -20px -10px;
+}
+
+p.skill{
+    color: black;
+    border: solid 1px #ebebeb;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.5s;
+}
+
+p.skill:hover{
+    cursor: pointer;
+    background-color: #f7a400;
+    color: white;
+}
+
+p.certif{
+    border: solid 1px #ebebeb;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    transition: 0.5s;
+}
+
+p.certif:hover{
+    border: solid 1px #f7a400;
+    cursor: pointer;
+}
+
+.leftbar{
+    grid-area: lft;
+    /* background-color: #f7a400; */
+}
+
+.rightbar{
+    grid-area: rgt;
+    /* background-color: #f7a400; */
+}
+
+.footer{
+    grid-area: ftr;
+    border: solid 1px #ebebeb;
+    text-align: center;
+    box-shadow: 0px -1px 5px #ebebeb;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        grid-template-areas:
+            "nav nav nav nav nav nav nav nav nav nav nav nav"
+            "ctn ctn ctn ctn ctn ctn ctn ctn ctn ctn ctn ctn"
+            "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    }
+    .content-text{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        grid-template-areas:
+            "nav nav nav nav nav nav nav nav nav nav nav nav"
+            "lft ctn ctn ctn ctn ctn ctn ctn ctn ctn ctn rgt"
+            "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container{
+    grid-template-areas:
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "lft lft lft ctn ctn ctn ctn ctn ctn rgt rgt rgt"
+        "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+    grid-template-columns: 100px 100px auto auto auto auto auto auto auto auto 100px 100px;
+    grid-template-rows: 60px auto 60px;
+    }
+}
